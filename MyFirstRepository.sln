@@ -9,7 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EC8BCE94
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstRepository.Web", "src\MyFirstRepository.Web\MyFirstRepository.Web.csproj", "{455940F5-B202-49BF-83A8-3CC9B161197C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "tests\UnitTests\UnitTests\UnitTests.csproj", "{EAA893CA-1D8B-4EDE-94ED-F3BBA768B038}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTests\UnitTests\UnitTests.csproj", "{EAA893CA-1D8B-4EDE-94ED-F3BBA768B038}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AFF4B56B-3D61-4172-BD9B-9EC3F73361E0}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
