@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C2A42076-643C-4202-95B8-C0A304EA8A3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EC8BCE94-02FD-4944-8696-BCE3AAC9F459}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstRepository.Web", "src\MyFirstRepository.Web\MyFirstRepository.Web.csproj", "{455940F5-B202-49BF-83A8-3CC9B161197C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{455940F5-B202-49BF-83A8-3CC9B161197C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455940F5-B202-49BF-83A8-3CC9B161197C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455940F5-B202-49BF-83A8-3CC9B161197C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455940F5-B202-49BF-83A8-3CC9B161197C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{455940F5-B202-49BF-83A8-3CC9B161197C} = {C2A42076-643C-4202-95B8-C0A304EA8A3F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CD077C3-149A-41F1-9E6F-4A61CC9B20F8}
+	EndGlobalSection
+EndGlobal
