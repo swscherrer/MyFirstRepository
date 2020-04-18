@@ -1,7 +1,6 @@
-using System;
-using Xunit;
+﻿using Xunit;
 
-namespace UnitTests
+namespace FunctionalTests
 {
     public class UnitTest1
     {

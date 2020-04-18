@@ -12,5 +12,10 @@
     <CodeAnalysisRuleSet>MyFirstRepository.Web.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyFirstRepository.Core\MyFirstRepository.Core.csproj" />
+    <ProjectReference Include="..\MyFirstRepository.Infrastructure\MyFirstRepository.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>

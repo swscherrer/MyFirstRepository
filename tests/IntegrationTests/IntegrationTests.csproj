@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
 
-    <RootNamespace>My‏FirstRepository</RootNamespace>
+    <RootNamespace>MyFirstRepository</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\MyFirstRepository.Web\MyFirstRepository.Web.csproj" />
+    <ProjectReference Include="..\..\src\MyFirstRepository.Web\MyFirstRepository.Web.csproj" />
   </ItemGroup>
 
 </Project>
