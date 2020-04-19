@@ -19,13 +19,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstRepository.Core", "src\MyFirstRepository.Core\MyFirstRepository.Core.csproj", "{C15CE984-0686-4C82-BBE8-33C37EEC87EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstRepository.Core", "src\MyFirstRepository.Core\MyFirstRepository.Core.csproj", "{C15CE984-0686-4C82-BBE8-33C37EEC87EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstRepository.Infrastructure", "src\MyFirstRepository.Infrastructure\MyFirstRepository.Infrastructure.csproj", "{06CE771B-2FF0-4620-84F2-50D717F7E108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstRepository.Infrastructure", "src\MyFirstRepository.Infrastructure\MyFirstRepository.Infrastructure.csproj", "{06CE771B-2FF0-4620-84F2-50D717F7E108}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "tests\IntegrationTests\IntegrationTests.csproj", "{102437AF-2F64-4E2B-9ED3-8DF9DF9AEA0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\IntegrationTests\IntegrationTests.csproj", "{102437AF-2F64-4E2B-9ED3-8DF9DF9AEA0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalTests", "tests\FunctionalTests\FunctionalTests.csproj", "{67FE2E23-8D16-44AB-BF44-7A20FB6AEA6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionalTests", "tests\FunctionalTests\FunctionalTests.csproj", "{67FE2E23-8D16-44AB-BF44-7A20FB6AEA6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{07B8B2C4-D280-4659-AD2D-FB6CAA09C813}"
+	ProjectSection(SolutionItems) = preProject
+		docs\.gitignore = docs\.gitignore
+		docs\docfx.json = docs\docfx.json
+		docs\index.md = docs\index.md
+		docs\toc.yml = docs\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{CA9FBDE8-E58F-4F57-9D83-9C69BC3E2FBC}"
+	ProjectSection(SolutionItems) = preProject
+		docs\articles\intro.md = docs\articles\intro.md
+		docs\articles\toc.yml = docs\articles\toc.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{07F46925-8D2C-4224-9B43-12E193A567CE}"
+	ProjectSection(SolutionItems) = preProject
+		pipelines\CI.yml = pipelines\CI.yml
+		pipelines\DocCI.yml = pipelines\DocCI.yml
+		pipelines\SonarCI.yml = pipelines\SonarCI.yml
+		pipelines\PullRequest.yml = pipelines\PullRequest.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +90,7 @@ Global
 		{06CE771B-2FF0-4620-84F2-50D717F7E108} = {C2A42076-643C-4202-95B8-C0A304EA8A3F}
 		{102437AF-2F64-4E2B-9ED3-8DF9DF9AEA0E} = {EC8BCE94-02FD-4944-8696-BCE3AAC9F459}
 		{67FE2E23-8D16-44AB-BF44-7A20FB6AEA6D} = {EC8BCE94-02FD-4944-8696-BCE3AAC9F459}
+		{CA9FBDE8-E58F-4F57-9D83-9C69BC3E2FBC} = {07B8B2C4-D280-4659-AD2D-FB6CAA09C813}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CD077C3-149A-41F1-9E6F-4A61CC9B20F8}
