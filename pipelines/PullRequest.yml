@@ -7,25 +7,33 @@
 trigger: none
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 
 variables:
-  solution: '**/*.sln'
+  solution: '*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
 
 - task: SonarCloudPrepare@1
+  displayName: 'Prepare Analysis on SonarCloud'
   inputs:
     SonarCloud: 'SonarCloud Connection'
     organization: 'scherrer-home'
     scannerMode: 'MSBuild'
     projectKey: 'MyFirstRepository'
     projectName: 'MyFirstRepository'
+    extraProperties: |
+      sonar.test.exclusions=tests/
+      sonar.cs.vscoveragexml.reportsPaths=$(Agent.TempDirectory)/**/*.coveragexml
+      sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
 
 - task: WhiteSource Bolt@20
+  displayName: 'WhiteSource Bolt'
+  inputs:
+    cwd: src
 
 - task: DotNetCoreCLI@2
   displayName: Restore
@@ -39,15 +47,19 @@ steps:
   inputs:
     command: 'build'
     projects: $(solution)
+    arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
     command: 'test'
     projects: 'tests/**/*.csproj'
+    arguments: '--collect "Code coverage" --configuration $(BuildConfiguration)'
 
 - task: SonarCloudAnalyze@1
+  displayName: 'Analyze Code'
 
 - task: SonarCloudPublish@1
+  displayName: 'Publish Quality Gate Result'
   inputs:
     pollingTimeoutSec: '300'
