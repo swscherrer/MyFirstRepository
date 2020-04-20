@@ -4,7 +4,7 @@ using System;
 
 namespace MyFirstRepository.Web
 {
-    public class Program
+    public static class Program
     {
         public static void Main(String[] args)
         {

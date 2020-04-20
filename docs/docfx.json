@@ -3,13 +3,15 @@
     {
       "src": [
         {
-          "cwd": "../",
+          "src": "../",
           "files": [
             "src/**/*.csproj"
           ]
         }
       ],
-      "dest": "api"
+      "dest": "api",
+      "force": true,
+      "shouldSkipMarkup": false
     }
   ],
   "build": {
@@ -47,6 +49,9 @@
         ]
       }
     ],
+    "globalMetadata": {
+      "_appTitle": "MyFirstRepository"
+    },
     "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
