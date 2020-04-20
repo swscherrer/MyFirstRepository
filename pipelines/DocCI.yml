@@ -19,16 +19,6 @@ variables:
 
 steps:
 
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'SonarCloud Connection'
-    organization: 'scherrer-home'
-    scannerMode: 'MSBuild'
-    projectKey: 'MyFirstRepository'
-    projectName: 'MyFirstRepository'
-
-- task: WhiteSource Bolt@20
-
 - task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
@@ -36,20 +26,7 @@ steps:
     projects: $(solution)
     feedsToUse: 'select'
 
-- task: DotNetCoreCLI@2
-  displayName: Build
+- task: DocFxTask@0
+  displayName: 'Create DocFx Documentation'
   inputs:
-    command: 'build'
-    projects: $(solution)
-
-- task: DotNetCoreCLI@2
-  displayName: Test
-  inputs:
-    command: 'test'
-    projects: 'tests/**/*.csproj'
-
-- task: SonarCloudAnalyze@1
-
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
+    solution: 'docs/docfx.json'
