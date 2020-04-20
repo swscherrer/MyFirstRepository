@@ -1,54 +1,40 @@
-# ASP.NET
-
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
-
 trigger:
-- master
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - src
+      - pipelines/CI.yml
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  Solution: '**/*.sln'
+  BuildConfiguration: 'Release'
 
 steps:
-
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'SonarCloud Connection'
-    organization: 'scherrer-home'
-    scannerMode: 'MSBuild'
-    projectKey: 'MyFirstRepository'
-    projectName: 'MyFirstRepository'
-
-- task: WhiteSource Bolt@20
 
 - task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
     command: 'restore'
-    projects: $(solution)
+    projects: $(Solution)
     feedsToUse: 'select'
 
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
     command: 'build'
-    projects: $(solution)
+    projects: $(Solution)
+    arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: Test
+  displayName: Publish
   inputs:
-    command: 'test'
-    projects: 'tests/**/*.csproj'
-
-- task: SonarCloudAnalyze@1
-
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
+    command: 'publish'
+    publishWebProjects: false
+    projects: 'src/MyFirstRepository.Web/*.csproj'
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.StagingDirectory)'
