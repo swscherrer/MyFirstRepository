@@ -1,0 +1,32 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - src
+      - tests
+      - pipelines/DocsCI.yml
+
+pool:
+  vmImage: 'windows-latest'
+
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+    command: 'restore'
+    projects: $(solution)
+    feedsToUse: 'select'
+
+- task: DocFxTask@0
+  displayName: 'Create DocFx Documentation'
+  inputs:
+    solution: 'docs/docfx.json'

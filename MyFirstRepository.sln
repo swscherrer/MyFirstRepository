@@ -43,7 +43,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{07F46925-8D2C-4224-9B43-12E193A567CE}"
 	ProjectSection(SolutionItems) = preProject
 		pipelines\CI.yml = pipelines\CI.yml
-		pipelines\DocCI.yml = pipelines\DocCI.yml
+		pipelines\DocsCI.yml = pipelines\DocsCI.yml
 		pipelines\PullRequest.yml = pipelines\PullRequest.yml
 		pipelines\SonarCI.yml = pipelines\SonarCI.yml
 	EndProjectSection
