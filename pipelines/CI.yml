@@ -35,6 +35,5 @@ steps:
   displayName: Publish
   inputs:
     command: 'publish'
-    publishWebProjects: false
-    projects: 'src/MyFirstRepository.Web/*.csproj'
+    publishWebProjects: true
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
