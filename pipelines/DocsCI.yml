@@ -19,10 +19,10 @@ steps:
   displayName: Restore
   inputs:
     command: restore
-    projects: *.sln
+    projects: '*.sln'
     verbosityRestore: Normal
 
 - task: DocFxTask@0
   displayName: 'Create DocFx Documentation'
   inputs:
-    solution: docs/docfx.json
+    solution: 'docs/docfx.json'

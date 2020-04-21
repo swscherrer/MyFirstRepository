@@ -7,7 +7,7 @@ pool:
   vmImage: windows-2019
 
 variables:
-  Solution: *.sln
+  Solution: '*.sln'
   BuildConfiguration: Release
 
 steps:
