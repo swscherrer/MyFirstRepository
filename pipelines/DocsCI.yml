@@ -8,23 +8,19 @@ trigger:
       - tests
       - pipelines/DocsCI.yml
 
+pr: none
+
 pool:
-  vmImage: 'windows-latest'
-
-
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  vmImage: windows-2019
 
 steps:
 
 - task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
-    command: 'restore'
-    projects: $(solution)
-    feedsToUse: 'select'
+    command: restore
+    projects: '*.sln'
+    verbosityRestore: Normal
 
 - task: DocFxTask@0
   displayName: 'Create DocFx Documentation'

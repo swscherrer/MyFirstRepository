@@ -7,12 +7,14 @@ trigger:
       - src
       - pipelines/CI.yml
 
+pr: none
+
 pool:
   vmImage: 'ubuntu-latest'
 
 
 variables:
-  Solution: '**/*.sln'
+  Solution: '*.sln'
   BuildConfiguration: 'Release'
 
 steps:
@@ -22,7 +24,7 @@ steps:
   inputs:
     command: 'restore'
     projects: $(Solution)
-    feedsToUse: 'select'
+    verbosityRestore: 'Normal'
 
 - task: DotNetCoreCLI@2
   displayName: Build
