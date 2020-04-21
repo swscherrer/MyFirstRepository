@@ -7,6 +7,8 @@ trigger:
       - src
       - pipelines/CI.yml
 
+pr: none
+
 pool:
   vmImage: 'ubuntu-latest'
 

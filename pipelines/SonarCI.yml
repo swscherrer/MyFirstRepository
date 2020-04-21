@@ -8,6 +8,8 @@ trigger:
       - tests
       - pipelines/SonarCI.yml
 
+pr: none
+
 pool:
   vmImage: windows-2019
 
