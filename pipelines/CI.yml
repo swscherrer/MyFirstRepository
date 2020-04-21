@@ -8,39 +8,39 @@ trigger:
       - pipelines/CI.yml
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 
 variables:
-  Solution: '**/*.sln'
-  BuildConfiguration: 'Release'
+  Solution: **/*.sln
+  BuildConfiguration: Release
 
 steps:
 
 - task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
-    command: 'restore'
+    command: restore
     projects: $(Solution)
-    feedsToUse: 'select'
+    verbosityRestore: Normal
 
 - task: DotNetCoreCLI@2
   displayName: Build
   inputs:
-    command: 'build'
+    command: build
     projects: $(Solution)
     arguments: '--configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
-    command: 'publish'
+    command: publish
     publishWebProjects: true
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifact'
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'MyFirstRepository-CI-drop'
-    publishLocation: 'Container'
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: MyFirstRepository-CI-drop
+    publishLocation: Container
