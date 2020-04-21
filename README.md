@@ -2,7 +2,12 @@
 My initial development on a repository in Github.  The application is a WebAPI that exposes some typical RESTful service functions.
 
 ## Build
-[![Build Status](https://stevescherrer1.visualstudio.com/MyFirstRepository/_apis/build/status/swscherrer.MyFirstRepository?branchName=master)](https://stevescherrer1.visualstudio.com/MyFirstRepository/_build/latest?definitionId=1&branchName=master)
+|Build Name | Status |
+|-----------|--------|
+|CI         |[![Build Status](https://stevescherrer1.visualstudio.com/MyFirstRepository/_apis/build/status/MyFirstRepository-CI?branchName=master)](https://stevescherrer1.visualstudio.com/MyFirstRepository/_build/latest?definitionId=3&branchName=master)|
+|DocsCI     |[![Build Status](https://stevescherrer1.visualstudio.com/MyFirstRepository/_apis/build/status/MyFirstRepository-DocsCI?branchName=master)](https://stevescherrer1.visualstudio.com/MyFirstRepository/_build/latest?definitionId=3&branchName=master)|
+|SonarCI    |[![Build Status](https://stevescherrer1.visualstudio.com/MyFirstRepository/_apis/build/status/MyFirstRepository-SonarCI?branchName=master)](https://stevescherrer1.visualstudio.com/MyFirstRepository/_build/latest?definitionId=3&branchName=master)|
+
 ## Quality
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=MyFirstRepository)
 
