@@ -84,8 +84,3 @@ steps:
   displayName: 'Publish Quality Gate Result'
   inputs:
     pollingTimeoutSec: '300'
-
-- task: sonar-buildbreaker@8
-  enabled: false
-  displayName: 'SonarCloud Build Breaker'
-  inputs: 'SonarCloud Connection'
