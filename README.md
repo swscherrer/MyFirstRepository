@@ -1,4 +1,6 @@
 # MyFirstRepository
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 My initial development on a repository in Github.  The application is a WebAPI that exposes some typical RESTful service functions.
 
 ## Build

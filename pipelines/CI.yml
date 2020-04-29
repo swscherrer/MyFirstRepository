@@ -12,33 +12,32 @@ pr: none
 pool:
   vmImage: 'ubuntu-latest'
 
-
 variables:
-  Solution: '*.sln'
+  Project: 'src/*.Web/*.csproj'
   BuildConfiguration: 'Release'
 
 steps:
-
 - task: DotNetCoreCLI@2
-  displayName: Restore
+  displayName: 'Restore'
   inputs:
     command: 'restore'
-    projects: $(Solution)
-    verbosityRestore: 'Normal'
+    projects: '$(Project)'
+    feedsToUse: 'select'
+    verbosityRestore: 'Minimal'
 
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: 'Build'
   inputs:
     command: 'build'
-    projects: $(Solution)
-    arguments: '--configuration $(BuildConfiguration)'
+    projects: '$(Project)'
+    arguments: '--no-restore --configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
     command: 'publish'
     publishWebProjects: true
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    arguments: '--no-restore --no-build --configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifact'
