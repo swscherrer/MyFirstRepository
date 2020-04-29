@@ -54,7 +54,7 @@ steps:
     command: 'test'
     projects: '$(Solution)'
     publishTestResults: false
-    arguments: '--no-restore --no-build --configuration $(BuildConfiguration) --logger trx --collect "XPlat Code Coverage" --results-directory $(TestOutputDirectory)'
+    arguments: '--no-restore --no-build --configuration $(BuildConfiguration) --logger trx --collect "XPlat Code Coverage" --results-directory $(TestResultsDir)'
 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results'
