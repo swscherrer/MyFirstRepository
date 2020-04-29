@@ -11,16 +11,16 @@ trigger:
 pr: none
 
 pool:
-  vmImage: windows-2019
+  vmImage: 'windows-2019'
 
 steps:
-
 - task: DotNetCoreCLI@2
-  displayName: Restore
+  displayName: 'Restore'
   inputs:
-    command: restore
+    command: 'restore'
     projects: '*.sln'
-    verbosityRestore: Normal
+    feedsToUse: 'select'
+    verbosityRestore: 'Minimal'
 
 - task: DocFxTask@0
   displayName: 'Create DocFx Documentation'

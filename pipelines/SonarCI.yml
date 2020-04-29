@@ -11,46 +11,73 @@ trigger:
 pr: none
 
 pool:
-  vmImage: windows-2019
+  vmImage: 'ubuntu-latest'
 
 variables:
   Solution: '*.sln'
-  BuildConfiguration: Release
+  BuildConfiguration: 'Release'
+  TestResultsDir: '$(Agent.TempDirectory)/TestResults'
+  MergedReportDir: '$(Agent.TempDirectory)/TestResults/MergedCoverageReport'
 
 steps:
 - task: SonarCloudPrepare@1
   displayName: 'Prepare Analysis on SonarCloud'
   inputs:
     SonarCloud: 'SonarCloud Connection'
-    organization: scherrer-home
-    scannerMode: MSBuild
-    projectKey: MyFirstRepository
-    projectName: MyFirstRepository
+    organization: 'scherrer-home'
+    scannerMode: 'MSBuild'
+    projectKey: 'MyFirstRepository'
+    projectName: 'MyFirstRepository'
     extraProperties: |
       sonar.test.exclusions=tests/
-      sonar.cs.vscoveragexml.reportsPaths=$(Agent.TempDirectory)/**/*.coveragexml
-      sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+      sonar.coverageReportPaths=$(MergedReportDir)/SonarQube.xml
+      sonar.cs.vstest.reportsPaths=$(TestResultsDir)/*.trx
 
 - task: DotNetCoreCLI@2
-  displayName: Restore
+  displayName: 'Restore'
   inputs:
-    command: restore
-    projects: $(Solution)
-    verbosityRestore: 'Normal'
+    command: 'restore'
+    projects: '$(Solution)'
+    feedsToUse: 'select'
+    verbosityRestore: 'Minimal'
 
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: 'Build'
   inputs:
-    command: build
-    projects: $(Solution)
-    arguments: '--configuration $(BuildConfiguration)'
+    command: 'build'
+    projects: '$(Solution)'
+    arguments: '--no-restore --configuration $(BuildConfiguration)'
 
 - task: DotNetCoreCLI@2
-  displayName: Test
+  displayName: 'Test'
   inputs:
-    command: test
-    projects: tests/**/*.csproj
-    arguments: '--collect "Code coverage" --configuration $(BuildConfiguration)'
+    command: 'test'
+    projects: '$(Solution)'
+    publishTestResults: false
+    arguments: '--no-restore --no-build --configuration $(BuildConfiguration) --logger trx --collect "XPlat Code Coverage" --results-directory $(TestOutputDirectory)'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results'
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '$(TestResultsDir)/*.trx'
+    mergeTestResults: true
+    buildPlatform: 'Any CPU'
+    buildConfiguration: '$(BuildConfiguration)'
+
+- task: reportgenerator@4
+  displayName: 'Merge Coverage Reports'
+  inputs:
+    reports: '$(TestResultsDir)/*/coverage.cobertura.xml'
+    targetdir: '$(MergedReportDir)'
+    reporttypes: 'Cobertura;SonarQube'
+    assemblyfilters: '-*Tests*'
+
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish Coverage Results'
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(MergedReportDir)/Cobertuna.xml'
 
 - task: SonarCloudAnalyze@1
   displayName: 'Analyze Code'
@@ -58,4 +85,4 @@ steps:
 - task: SonarCloudPublish@1
   displayName: 'Publish Quality Gate Result'
   inputs:
-    pollingTimeoutSec: 300
+    pollingTimeoutSec: '300'
