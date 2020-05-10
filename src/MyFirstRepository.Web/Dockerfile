@@ -1,4 +1,4 @@
-# NOTE:  The context expected for this Dockerfile is the MyFirstRepository/src directory.
+# NOTE:  The expected context for this Dockerfile is the MyFirstRepository/ directory.
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
