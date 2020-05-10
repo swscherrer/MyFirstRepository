@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\MyFirstRepository.Web\MyFirstRepository.Web.csproj" />
+    <ProjectReference Include="..\..\src\MyFirstRepository.Web\MyFirstRepository.Web.csproj" />
   </ItemGroup>
 
 </Project>
