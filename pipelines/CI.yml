@@ -54,3 +54,6 @@ steps:
     command: 'buildAndPush'
     Dockerfile: 'src/*Web/Dockerfile'
     buildContext: './'
+    tags: |
+      $(Build.BuildId)
+      latest
