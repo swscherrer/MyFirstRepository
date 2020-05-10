@@ -48,6 +48,7 @@ steps:
     repository: 'MyFirstRepository'
     command: 'build'
     Dockerfile: 'src/*Web/Dockerfile'
+    buildContext: './'
 
 - task: DotNetCoreCLI@2
   displayName: 'Test'
