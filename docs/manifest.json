@@ -1,0 +1,284 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Users/steve/Repositories/MyFirstRepository/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.Enums.WeatherSummary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.Enums.WeatherSummary.html",
+          "hash": "+479u3vICcKSUFJx2hN64A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.Enums.html",
+          "hash": "X84UKci1EfUGabBJcfoqxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.ServiceModels.WeatherForecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.ServiceModels.WeatherForecast.html",
+          "hash": "V3eihzp8zrUhcciLLsf8HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.ServiceModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.ServiceModels.html",
+          "hash": "vKAhJ7hBiOxJemHnhPsWnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.ServicesConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.ServicesConfiguration.html",
+          "hash": "TFlxTdOVkhFIWwiN3GX2gQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Core.html",
+          "hash": "DAzdvuwpJOK+1vkibfO8ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Infrastructure.ServiceConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Infrastructure.ServiceConfiguration.html",
+          "hash": "aJAjtG+Oqi51USb6632TAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Infrastructure.html",
+          "hash": "YIBBfX9PBjY29ZVQaHtxug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Web.Controllers.WeatherForecastController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Web.Controllers.WeatherForecastController.html",
+          "hash": "Mbp51vfxWdJlE+DabaNQCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Web.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Web.Controllers.html",
+          "hash": "swdjvpu6ND73jGVrg84kqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Web.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Web.Program.html",
+          "hash": "0PTA/UD+DYsb39qyTQTdPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Web.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Web.Startup.html",
+          "hash": "hsL/Y1Q2zDEA4iDNKS0bfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MyFirstRepository.Web.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MyFirstRepository.Web.html",
+          "hash": "+CmIiH9fvBztJz8OzS3K8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "47ate2o+iGcKzlzVmUFI8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ChERp3fF1sNxbMonSo5ecA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "0tfohC7Engjx6416b9GUqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Gm7nXSFE5UrTR6QmZe9/OQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 13,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
