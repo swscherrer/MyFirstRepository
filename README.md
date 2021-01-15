@@ -3,7 +3,7 @@
 
 My initial development on a repository in Github.  The application is a WebAPI that exposes some typical RESTful service functions.
 
-[![Repository Documentation](https://swscherrer.github.io/MyFirstRepository/)]
+[Repository Documentation](https://swscherrer.github.io/MyFirstRepository/)
 
 ## Build
 |Build Name | Status |
