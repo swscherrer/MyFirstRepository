@@ -52,8 +52,7 @@
     "globalMetadata": {
       "_appTitle": "MyFirstRepository"
     },
-    "dest": "../site",
-    //"dest": "_site",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

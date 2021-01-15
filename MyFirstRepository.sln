@@ -24,20 +24,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionalTests", "tests\FunctionalTests\FunctionalTests.csproj", "{67FE2E23-8D16-44AB-BF44-7A20FB6AEA6D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docfx", "docfx", "{07B8B2C4-D280-4659-AD2D-FB6CAA09C813}"
-	ProjectSection(SolutionItems) = preProject
-		docs\.gitignore = docs\.gitignore
-		docs\docfx.json = docs\docfx.json
-		docs\index.md = docs\index.md
-		docs\toc.yml = docs\toc.yml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "articles", "articles", "{CA9FBDE8-E58F-4F57-9D83-9C69BC3E2FBC}"
-	ProjectSection(SolutionItems) = preProject
-		docs\articles\intro.md = docs\articles\intro.md
-		docs\articles\toc.yml = docs\articles\toc.yml
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{07F46925-8D2C-4224-9B43-12E193A567CE}"
 	ProjectSection(SolutionItems) = preProject
 		pipelines\CI.yml = pipelines\CI.yml
@@ -47,6 +33,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTests\UnitTests.csproj", "{333B9B34-EF45-4169-969F-8767A6013E9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docfx", "docfx", "{F194F29E-C4F9-4005-AA3C-390FD31BDA68}"
+	ProjectSection(SolutionItems) = preProject
+		docfx\.gitignore = docfx\.gitignore
+		docfx\docfx.json = docfx\docfx.json
+		docfx\index.md = docfx\index.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,7 +81,6 @@ Global
 		{06CE771B-2FF0-4620-84F2-50D717F7E108} = {C2A42076-643C-4202-95B8-C0A304EA8A3F}
 		{102437AF-2F64-4E2B-9ED3-8DF9DF9AEA0E} = {EC8BCE94-02FD-4944-8696-BCE3AAC9F459}
 		{67FE2E23-8D16-44AB-BF44-7A20FB6AEA6D} = {EC8BCE94-02FD-4944-8696-BCE3AAC9F459}
-		{CA9FBDE8-E58F-4F57-9D83-9C69BC3E2FBC} = {07B8B2C4-D280-4659-AD2D-FB6CAA09C813}
 		{333B9B34-EF45-4169-969F-8767A6013E9C} = {EC8BCE94-02FD-4944-8696-BCE3AAC9F459}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
