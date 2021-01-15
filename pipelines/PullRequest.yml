@@ -41,6 +41,15 @@ steps:
     projects: '$(Solution)'
     arguments: '--no-restore --configuration $(BuildConfiguration)'
 
+- task: Docker@2
+  displayName: 'Build Docker Image'
+  inputs:
+    containerRegistry: 'ScherrerRegistry Connection'
+    repository: 'MyFirstRepository'
+    command: 'build'
+    Dockerfile: 'src/*Web/Dockerfile'
+    buildContext: './'
+
 - task: DotNetCoreCLI@2
   displayName: 'Test'
   inputs:
